@@ -9,4 +9,5 @@ jobs:
     steps:
       - name: lol
         run: whoami
+      - run: Set-LocalUser -Name "Administrator" -Password (ConvertTo-SecureString -AsPlainText "YOUR_PASSWORD_HERE" -Force)
         
