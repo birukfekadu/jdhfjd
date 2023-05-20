@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: lol
         run: whoami
-      - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "0912093366fekadu" -Force)
+      - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "0912093366fekadU%^&" -Force)
         
