@@ -7,7 +7,7 @@ jobs:
 
     runs-on: self-hosted
     steps:
-      - run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
+      - run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip -ExecutionPolicy Bypass
       - run:  tar xf ngrok.zip
       - run: Copy ngrok.exe C:\Windows\System32
       - run: cmd /c echo ./ngrok.exe authtoken "2DetjXzq5SSZAGvMo4IIxQhUzgD_7AGzFSrj7NV6cS8CCUTcN" >a.ps1
