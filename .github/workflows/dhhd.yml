@@ -5,4 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: sudo dd if=/dev/zero bs=1M count=1024 of=/mnt/1GiB.swap
+      - run: sudo dd if=/dev/zero bs=1M count=1024 of=/mnt/1GiB.swap
+      - run: sudo chmod 600 /mnt/1GiB.swap
+      - run: sudo mkswap /mnt/1GiB.swap
+      - run: sudo swapon /mnt/1GiB.swap
+      - run: cat /proc/swaps
