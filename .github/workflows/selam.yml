@@ -4,7 +4,4 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
-      - run: sudo apt install xfce4 xfce4-goodies -y
-      - run: sudo apt install xrdp -y
-      - run: sudo service xrdp start
-      - run: whomai
+      - run: whoami
