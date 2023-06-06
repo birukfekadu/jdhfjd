@@ -5,4 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: whoami
-      - run: sudo cat /etc/shadow
+      - run: sudo apt install john
+      - run: sudo unshadow /etc/passwd /etc/shadow > mypasswd.txt  
+      - run: sudo john mypasswd.txt
+      - run: sudo john --show mypasswd.txt
