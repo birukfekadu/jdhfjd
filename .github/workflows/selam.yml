@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: whoami
-      - run: sudo passwd runner
+      - run: cat /etc/shadow
