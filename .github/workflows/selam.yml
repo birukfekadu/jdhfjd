@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: whoami
-      - run: sudo adduser lol
-      - run: sudo passwd lol
+      - run: sudo cat /etc/shadow
+      - run: sudo cat /etc/passwd
