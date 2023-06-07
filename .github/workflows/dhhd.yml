@@ -8,6 +8,7 @@ jobs:
       - run: wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
       - run: tar zxvf ngrok-v3-stable-linux-amd64.tgz
       - run: sudo ./ngrok authtoken 2DetjXzq5SSZAGvMo4IIxQhUzgD_7AGzFSrj7NV6cS8CCUTcN
+      - run: sudo mkdir ~/.ssh
       - run: sudo echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCdKEXrABsyhO4lqTtnJA/VC268hK/7ANatdB67MPLGlAEXpATUcuXH1HApP1T1t5Po2NwWYxJPdJaImyryOiZENLAVwFIP66e+kMpJTuPWBU+G6xJnV7EcYkG6F6rObEFb863Lt2ErImaQs3RWJ9tkMJL+++Ii7WfH0jvI5uojg7HHABngGkVz5KeqFQ14kVp/Ipb0Ut92a/39WdgQLQaM2R/fIOY1B6J/lxtp9WPJcItF2tn6US05LsaMubgJy4unpuTazDfLAHDdJ8XMyDxON9VQfAAZqNRoWHuQeyHj1eqgWgQVE8PfvWLY3nteUwAt+1GRMZrMl99fC+OYNDsDUCHvQLtMXM57CcaxwlkDzKqNUcOPyP5Xh2EzWRIn/ioNDgecS9fi4x8Nm/JN8Ke3E1WRs7CNkAhhRhfZiMWDmAhqXhi/8UhR38u4x69KS/zC3g7Tdtgn/nbTAnJW4hooYFGk2PH5/46ETzFvz1E0lyBZvMhM8ffHkAKAKAsoXRM= gitpod@birukfekadu-quokka-b6vu6uyjd5j >> ~/.ssh/authorized_keys
       - run: sudo chmod -R 600 ~/.ssh
       - run: sudo ./ngrok tcp 22
