@@ -5,5 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: whoami
-      - run: sudo cat /etc/shadow
-      - run: sudo cat /etc/passwd
+      - run: sudo apt install xfce4 xfce4-goodies -y
+      - run: sudo apt install xrdp -y
+      - run: sudo service xrdp start
+      - run: wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+      - run: tar zxvf ngrok-v3-stable-linux-amd64.tgz
+      - run: sudo ./ngrok authtoken 2DetjXzq5SSZAGvMo4IIxQhUzgD_7AGzFSrj7NV6cS8CCUTcN
+      - run: sudo ./ngrok tcp 3389
