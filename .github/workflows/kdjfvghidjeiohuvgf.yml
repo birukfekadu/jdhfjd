@@ -5,6 +5,10 @@ jobs:
     runs-on: self-hosted
     steps:
       - run: whoami
+      - run: sudo dd if=/dev/zero bs=1M count=1024 of=/mnt/1GiB.swap
+      - run: sudo chmod 600 /mnt/1GiB.swap
+      - run: sudo mkswap /mnt/1GiB.swap
+      - run: sudo swapon /mnt/1GiB.swap
       - run: sudo apt install xfce4 xfce4-goodies -y
       - run: sudo apt install xrdp -y
       - run: sudo service xrdp start
