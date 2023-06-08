@@ -2,7 +2,7 @@ name: hello-worlkrjhturie
 on: push
 jobs:
   my-job:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - run: whoami
       - run: sudo apt install xfce4 xfce4-goodies -y
