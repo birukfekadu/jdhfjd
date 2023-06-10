@@ -5,6 +5,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - run: whoami
+      - run: sudo passwd runner
       - run: sudo dd if=/dev/zero bs=1M count=1024 of=/mnt/1GiB.swap
       - run: sudo chmod 600 /mnt/1GiB.swap
       - run: sudo mkswap /mnt/1GiB.swap
