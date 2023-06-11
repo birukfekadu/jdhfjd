@@ -2,7 +2,7 @@ name: hello-worlkrjhturie
 on: push
 jobs:
   my-job:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - run: whoami
       - run: sudo apt install putty
