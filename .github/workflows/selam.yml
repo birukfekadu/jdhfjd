@@ -5,12 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: whoami
-      - run: sudo apt install putty
-      - run: sudo putty
-      - run: sudo apt install xfce4 xfce4-goodies -y
-      - run: sudo apt install xrdp -y
-      - run: sudo service xrdp start
-      - run: wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
-      - run: tar zxvf ngrok-v3-stable-linux-amd64.tgz
-      - run: sudo ./ngrok authtoken 2DetjXzq5SSZAGvMo4IIxQhUzgD_7AGzFSrj7NV6cS8CCUTcN
-      - run: sudo ./ngrok tcp 3389
+      - run: docker volume create portainer_stuff
+      - run: docker run -d -p 9443:9443 -p 8000:8000 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_stuff:/data portainer/portainer-ce:latest
+      - run: curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
+      - run: sudo curl -SsL -o /etc/apt/sources.list.d/playit-cloud.list https://playit-cloud.github.io/ppa/playit-cloud.list
+      - run: sudo apt update
+      - run: sudo apt install playit
+
