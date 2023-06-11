@@ -5,6 +5,8 @@ jobs:
     runs-on: self-hosted
     steps:
       - run: whoami
+      - run: sudo apt install putty
+      - run: sudo putty
       - run: sudo apt install xfce4 xfce4-goodies -y
       - run: sudo apt install xrdp -y
       - run: sudo service xrdp start
