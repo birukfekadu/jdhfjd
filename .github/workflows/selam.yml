@@ -11,4 +11,5 @@ jobs:
       - run: sudo curl -SsL -o /etc/apt/sources.list.d/playit-cloud.list https://playit-cloud.github.io/ppa/playit-cloud.list
       - run: sudo apt update
       - run: sudo apt install playit
+      - run: playit
 
